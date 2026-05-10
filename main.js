@@ -1,3 +1,41 @@
+function openImageModal(src, alt) {
+  const modal = document.getElementById("imageModal");
+  const modalImage = document.getElementById("modalImage");
+  if (modal && modalImage) {
+    modalImage.src = src;
+    modalImage.alt = alt;
+    modal.setAttribute("aria-hidden", "false");
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function closeImageModal() {
+  const modal = document.getElementById("imageModal");
+  if (modal) {
+    modal.setAttribute("aria-hidden", "true");
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+}
+
+function setupImageModal() {
+  const modal = document.getElementById("imageModal");
+  const closeBtn = document.querySelector(".modal-close");
+  
+  if (closeBtn) {
+    closeBtn.addEventListener("click", closeImageModal);
+  }
+  
+  if (modal) {
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeImageModal();
+      }
+    });
+  }
+}
+
 function renderGifts() {
   const list = document.getElementById("giftList");
   if (!list) {
@@ -15,7 +53,7 @@ function renderGifts() {
 
     return `
       <article class="gift-card" style="animation-delay:${Math.min(index * 60, 280)}ms">
-        <img class="gift-thumb" src="${imageSrc}" alt="${imageAlt}" loading="lazy" />
+        <img class="gift-thumb" src="${imageSrc}" alt="${imageAlt}" loading="lazy" style="cursor:pointer;" />
         <div class="gift-meta">
           <span class="badge">${gift.categoria}</span>
         </div>
@@ -38,6 +76,12 @@ function renderGifts() {
 
       toggleReservation(giftId);
       renderGifts();
+    });
+  });
+
+  list.querySelectorAll(".gift-thumb").forEach((img) => {
+    img.addEventListener("click", () => {
+      openImageModal(img.src, img.alt);
     });
   });
 }
@@ -66,3 +110,4 @@ function setupLunchInfoLink() {
 renderGifts();
 setupClearButton();
 setupLunchInfoLink();
+setupImageModal();
