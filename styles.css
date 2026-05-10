@@ -179,6 +179,7 @@ h1 {
   color: var(--ink-soft);
   line-height: 1.65;
   font-size: 1.01rem;
+  text-align: justify;
 }
 
 .intro-content p:last-child {
