@@ -125,9 +125,10 @@ const RESERVATION_KEY = "casorio_reserved_gifts";
 const CONTACT_CONFIG = {
   whatsappNumber: "351965885868",
   mbway: "+351 913070317 ou +351 965885868",
-  iban: "PT50XXXXX",
+  iban: "PT50 0010 0000 6522 4680 001 71",
   lunchInfoUrl: "#"
 };
+
 
 function moneyEUR(value) {
   return new Intl.NumberFormat("pt-PT", {
