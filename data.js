@@ -79,7 +79,7 @@ const GIFTS = [
   },
   {
     id: "mudas-cravo",
-    nome: "Mudas para que toda a gente consiga desfilar com nossos cravos no 25 de abril",
+    nome: "Mudas para que toda a gente consiga desfilar com muitos cravos no 25 de abril",
     valor: 35,
     imagem: "images/cravo.jpeg"
   },
@@ -97,15 +97,27 @@ const GIFTS = [
   },
   {
     id: "fogao-lenha",
-    nome: "Fogão a lenha: porque sem ele não dá para fazer a verdadeira polenta.",
+    nome: "Fogão a lenha: porque sem ele não dá para fazer a polenta que a noiva quer.",
     valor: 120,
     imagem: "images/fogao.jpeg"
   },
   {
     id: "mesa-grande",
-    nome: "Mesa grande para os grandes cafés que teremos com os amigos",
+    nome: "Mesa grande o suficiente para receber toda gente amiga para o café",
     valor: 80,
     imagem: "images/mesa.jpeg"
+  },
+   {
+    id: "pedreiro",
+    nome: "Uma diária do pedreiro",
+    valor: 55,
+    imagem: "images/pedreiro.jpeg"
+  },
+   {
+    id: "lanchepedreiro",
+    nome: "Uma semana de lanches pro pedreiro não sumir da obra",
+    valor: 45,
+    imagem: "images/lanche.jpeg"
   }
 ];
 
