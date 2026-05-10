@@ -54,9 +54,6 @@ function renderGifts() {
     return `
       <article class="gift-card" style="animation-delay:${Math.min(index * 60, 280)}ms">
         <img class="gift-thumb" src="${imageSrc}" alt="${imageAlt}" loading="lazy" style="cursor:pointer;" />
-        <div class="gift-meta">
-          <span class="badge">${gift.categoria}</span>
-        </div>
         <h3>${gift.nome}</h3>
         <span class="price">${moneyEUR(gift.valor)}</span>
         <div class="card-actions">

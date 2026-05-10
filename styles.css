@@ -175,10 +175,14 @@ h1 {
 }
 
 .intro-content p {
-  margin: 0;
+  margin: 0 0 0.95rem;
   color: var(--ink-soft);
   line-height: 1.65;
   font-size: 1.01rem;
+}
+
+.intro-content p:last-child {
+  margin-bottom: 0;
 }
 
 .nav-link {
@@ -261,22 +265,6 @@ h1 {
   object-fit: cover;
   border-radius: 14px;
   border: 1px solid #eadbcf;
-}
-
-.gift-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.83rem;
-  color: var(--ink-soft);
-}
-
-.badge {
-  background: #f2ede6;
-  color: #705847;
-  border-radius: 999px;
-  padding: 0.2rem 0.55rem;
-  font-size: 0.72rem;
 }
 
 .gift-card p {
