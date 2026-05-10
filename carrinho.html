@@ -16,6 +16,9 @@
 
   <header class="container hero">
     <p class="eyebrow">Casamento Helena + Leo</p>
+    <figure class="hero-photo-wrap">
+      <img class="hero-photo" src="images/casal-header.jpg" alt="Foto do casal Helena e Leo" loading="lazy" onerror="this.src='images/casal-header-placeholder.svg'; this.onerror=null;" />
+    </figure>
     <h1>Carrinho fictício</h1>
     <p class="subtitle">Aqui ves os presentes reservados, confirmas no WhatsApp e encontras os dados de pagamento.</p>
     <nav class="top-nav" aria-label="Navegação principal">
@@ -28,6 +31,7 @@
     <section>
       <div class="section-head">
         <h2>Itens reservados</h2>
+        <button id="clearCartBtn" class="ghost-btn" type="button">Limpar carrinho (teste)</button>
       </div>
       <div id="cartState" class="empty-state">Ainda não há presentes reservados.</div>
       <div id="cartList" class="cart-list" aria-live="polite"></div>
@@ -41,6 +45,7 @@
         <h3>Pagamento e confirmação</h3>
         <p>Se ja reservaste um presente, envia a confirmacao por WhatsApp e escolhe MB Way ou transferencia.</p>
         <a id="cartWhatsAppLink" class="cta-link" href="#" target="_blank" rel="noopener noreferrer">Enviar confirmação no WhatsApp</a>
+        <a id="lunchInfoLinkCart" class="cta-link" href="#" target="_blank" rel="noopener noreferrer">Informacoes do almoco</a>
         <div class="payment-grid">
           <p><strong>MB Way:</strong> <span id="mbwayInfo">-</span></p>
           <p><strong>Transferência bancária:</strong> <span id="ibanInfo">-</span></p>

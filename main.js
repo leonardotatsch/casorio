@@ -10,12 +10,6 @@ function renderGifts() {
     const reserved = reservations.includes(gift.id);
     const btnText = reserved ? "Reservado" : "Reservar presente";
     const btnClass = reserved ? "reserve-btn reserved" : "reserve-btn";
-    const msg = [
-      "Ola, Helena e Leo!",
-      `Quero oferecer este presente: ${gift.nome} (${moneyEUR(gift.valor)}).`,
-      "Podem marcar como reservado, por favor?"
-    ].join("\n");
-    const waLink = buildWhatsAppLink(msg);
     const imageSrc = gift.imagem || "images/placeholder-gift.svg";
     const imageAlt = `Imagem do presente ${gift.nome}`;
 
@@ -30,7 +24,6 @@ function renderGifts() {
         <span class="price">${moneyEUR(gift.valor)}</span>
         <div class="card-actions">
           <button class="${btnClass}" type="button" data-gift-id="${gift.id}">${btnText}</button>
-          <a class="wa-btn" href="${waLink}" target="_blank" rel="noopener noreferrer">Informar no WhatsApp</a>
         </div>
       </article>
     `;
@@ -61,5 +54,15 @@ function setupClearButton() {
   });
 }
 
+function setupLunchInfoLink() {
+  const lunchInfoLinkMain = document.getElementById("lunchInfoLinkMain");
+  if (!lunchInfoLinkMain) {
+    return;
+  }
+
+  lunchInfoLinkMain.href = CONTACT_CONFIG.lunchInfoUrl || "#";
+}
+
 renderGifts();
 setupClearButton();
+setupLunchInfoLink();

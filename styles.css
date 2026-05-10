@@ -69,6 +69,20 @@ body {
   padding: 2.6rem 0 1.4rem;
 }
 
+.hero-photo-wrap {
+  margin: 0.95rem 0 0.35rem;
+  width: min(240px, 62vw);
+}
+
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 4px solid #fff8ef;
+  box-shadow: 0 10px 28px rgba(63, 37, 20, 0.2);
+}
+
 .eyebrow {
   margin: 0;
   color: var(--accent-2);
@@ -372,6 +386,10 @@ h1 {
 @media (max-width: 640px) {
   .hero {
     padding-top: 1.8rem;
+  }
+
+  .hero-photo-wrap {
+    width: min(190px, 56vw);
   }
 
   .section-head {

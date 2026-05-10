@@ -40,6 +40,7 @@ function setupPaymentInfo() {
   const mbwayInfo = document.getElementById("mbwayInfo");
   const ibanInfo = document.getElementById("ibanInfo");
   const cartWhatsAppLink = document.getElementById("cartWhatsAppLink");
+  const lunchInfoLinkCart = document.getElementById("lunchInfoLinkCart");
 
   if (mbwayInfo) {
     mbwayInfo.textContent = CONTACT_CONFIG.mbway;
@@ -65,7 +66,25 @@ function setupPaymentInfo() {
 
     cartWhatsAppLink.href = buildWhatsAppLink(msg);
   }
+
+  if (lunchInfoLinkCart) {
+    lunchInfoLinkCart.href = CONTACT_CONFIG.lunchInfoUrl || "#";
+  }
+}
+
+function setupClearCartButton() {
+  const clearCartBtn = document.getElementById("clearCartBtn");
+  if (!clearCartBtn) {
+    return;
+  }
+
+  clearCartBtn.addEventListener("click", () => {
+    clearReservations();
+    renderCart();
+    setupPaymentInfo();
+  });
 }
 
 renderCart();
 setupPaymentInfo();
+setupClearCartButton();
