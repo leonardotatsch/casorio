@@ -24,7 +24,6 @@ function renderCart() {
   cartList.innerHTML = reservedItems.map((gift) => `
     <article class="cart-item">
       <h3>${gift.nome}</h3>
-      <p>${gift.descricao}</p>
       <strong>${moneyEUR(gift.valor)}</strong>
     </article>
   `).join("");
