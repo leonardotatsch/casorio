@@ -66,26 +66,47 @@ body {
 }
 
 .hero {
-  padding: 2.6rem 0 1.4rem;
+  padding: 2rem 0 1.2rem;
 }
 
-.hero-photo-wrap {
-  margin: 0.95rem 0 0.35rem;
-  width: min(240px, 62vw);
+.hero-banner {
+  position: relative;
+  min-height: 280px;
+  border-radius: 22px;
+  overflow: hidden;
+  border: 1px solid #e8d8c7;
+  box-shadow: var(--shadow);
 }
 
 .hero-photo {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   object-fit: cover;
-  border-radius: 999px;
-  border: 4px solid #fff8ef;
-  box-shadow: 0 10px 28px rgba(63, 37, 20, 0.2);
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, rgba(35, 22, 15, 0.72), rgba(35, 22, 15, 0.2));
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  min-height: 280px;
+  padding: 1.2rem 1.25rem;
+  display: grid;
+  align-content: end;
+  gap: 0.45rem;
+  max-width: 70ch;
 }
 
 .eyebrow {
   margin: 0;
-  color: var(--accent-2);
+  color: #f4f2ec;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -102,18 +123,19 @@ h3 {
 
 h1 {
   font-size: clamp(2rem, 5vw, 3.3rem);
-  margin-top: 0.45rem;
+  margin-top: 0.1rem;
+  color: #fff;
 }
 
 .subtitle {
   max-width: 65ch;
-  color: var(--ink-soft);
-  margin-top: 0.7rem;
+  color: #f8eee2;
+  margin-top: 0.2rem;
   line-height: 1.55;
 }
 
 .top-nav {
-  margin-top: 1.4rem;
+  margin-top: 0.8rem;
   display: flex;
   gap: 0.65rem;
   flex-wrap: wrap;
@@ -385,11 +407,16 @@ h1 {
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 1.8rem;
+    padding-top: 1.5rem;
   }
 
-  .hero-photo-wrap {
-    width: min(190px, 56vw);
+  .hero-banner,
+  .hero-copy {
+    min-height: 245px;
+  }
+
+  .hero-copy {
+    padding: 1rem;
   }
 
   .section-head {
