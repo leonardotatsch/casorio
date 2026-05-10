@@ -1,7 +1,7 @@
 const GIFTS = [
   {
     id: "sacos-cimento",
-    nome: "Sacos de cimento para a fundacao do nosso amor",
+    nome: "Sacos de cimento para a fundação do nosso amor",
     valor: 30,
     imagem: "images/cimento.jpeg"
   },
@@ -13,7 +13,7 @@ const GIFTS = [
   },
   {
     id: "forno-eletrico",
-    nome: "Forno elétrico para os assados de domingo com amigos",
+    nome: "Forno elétrico para os assados de domingo com gente amiga",
     valor: 35,
     imagem: "images/forno.jpeg"
   },
@@ -43,13 +43,13 @@ const GIFTS = [
   },
   {
     id: "azulejos-cozinha",
-    nome: "Azulejos para a cozinha de campo",
+    nome: "Pia de cozinha grande para lavar os espetos de churrasco",
     valor: 85,
     imagem: "images/cozinha.jpeg"
   },
   {
     id: "EPIs",
-    nome: "EPIs para os projetos de bricolage que vao acabar sempre em mais ferramentas",
+    nome: "EPIs para os projetos de bricolage que vão acabar sempre em mais ferramentas",
     valor: 30,
     imagem: "images/capacete.jpeg"
   },
@@ -58,6 +58,54 @@ const GIFTS = [
     nome: "Porta blindada para impedir a entrada de boletos indesejados",
     valor: 150,
     imagem: "images/porta.jpeg"
+  },
+  {
+    id: "azulejos-casa-de-banho",
+    nome: "Azulejos para o santuário da casa: o banheiro",
+    valor: 70,
+    imagem: "images/piso.jpeg"
+  },
+    {
+    id: "vaso-sanitario",
+    nome: "Trono para os momentos de reflexão profunda",
+    valor: 100,
+    imagem: "images/vaso.jpeg"
+  },
+  {
+    id: "roseiral",
+    nome: "Roseiral para cultivar a jovem senhora que existe na noiva",
+    valor: 40,
+    imagem: "images/roseiral.jpeg"
+  },
+  {
+    id: "mudas-cravo",
+    nome: "Mudas para que toda a gente consiga desfilar com nossos cravos no 25 de abril",
+    valor: 35,
+    imagem: "images/cravo.jpeg"
+  },
+  {
+  id: "espetos-churrasco",
+  nome: "Espetos de churrasco para cultivar o gaúcho que existe no noivo",
+  valor: 50,
+  imagem: "images/espetos.jpeg"
+  },
+  {
+    id: "tacho-polenta",
+    nome: "Tacho de polenta porque a noiva quer.",
+    valor: 40,
+    imagem: "images/tacho.jpeg"
+  },
+  {
+    id: "fogao-lenha",
+    nome: "Fogão a lenha: porque sem ele não dá para fazer a verdadeira polenta.",
+    valor: 120,
+    imagem: "images/fogao.jpeg"
+  },
+  {
+    id: "mesa-grande",
+    nome: "Mesa grande para os grandes cafés que teremos com os amigos",
+    valor: 80,
+    imagem: "images/mesa.jpeg"
   }
 ];
 
