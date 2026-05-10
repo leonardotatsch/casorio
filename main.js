@@ -58,7 +58,6 @@ function renderGifts() {
           <span class="badge">${gift.categoria}</span>
         </div>
         <h3>${gift.nome}</h3>
-        <p>${gift.descricao}</p>
         <span class="price">${moneyEUR(gift.valor)}</span>
         <div class="card-actions">
           <button class="${btnClass}" type="button" data-gift-id="${gift.id}">${btnText}</button>
@@ -107,7 +106,23 @@ function setupLunchInfoLink() {
   lunchInfoLinkMain.href = CONTACT_CONFIG.lunchInfoUrl || "#";
 }
 
+function setupIntroToggle() {
+  const introContent = document.getElementById("introContent");
+  const toggleBtn = document.getElementById("toggleIntroBtn");
+  if (!introContent || !toggleBtn) {
+    return;
+  }
+
+  toggleBtn.addEventListener("click", () => {
+    const isCollapsed = introContent.classList.contains("intro-collapsed");
+    introContent.classList.toggle("intro-collapsed", !isCollapsed);
+    toggleBtn.textContent = isCollapsed ? "Ler menos" : "Ler mais";
+    toggleBtn.setAttribute("aria-expanded", String(isCollapsed));
+  });
+}
+
 renderGifts();
 setupClearButton();
 setupLunchInfoLink();
+setupIntroToggle();
 setupImageModal();

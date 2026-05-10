@@ -154,6 +154,26 @@ h1 {
   max-width: 75ch;
 }
 
+.intro-content.intro-collapsed {
+  position: relative;
+  max-height: 7.5rem;
+  overflow: hidden;
+}
+
+.intro-content.intro-collapsed::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2.2rem;
+  background: linear-gradient(180deg, rgba(255, 250, 243, 0), rgba(255, 250, 243, 1));
+}
+
+.intro-toggle {
+  margin-top: 0.75rem;
+}
+
 .intro-content p {
   margin: 0;
   color: var(--ink-soft);
