@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" role="img" aria-label="Imagem de presente">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f3d9be" />
+      <stop offset="1" stop-color="#f8efe3" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)" />
+  <g fill="none" stroke="#c27f53" stroke-width="16" opacity="0.8">
+    <rect x="340" y="220" width="520" height="320" rx="20" />
+    <path d="M340 340h520" />
+    <path d="M600 220v320" />
+    <path d="M470 220c0-52 34-86 78-86 34 0 52 20 52 52 0 15-5 25-14 34" />
+    <path d="M730 220c0-52-34-86-78-86-34 0-52 20-52 52 0 15 5 25 14 34" />
+  </g>
+  <text x="600" y="635" text-anchor="middle" font-size="42" font-family="Manrope, Arial, sans-serif" fill="#7d543a">
+    Adiciona aqui a imagem do presente
+  </text>
+</svg>

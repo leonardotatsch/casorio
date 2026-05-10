@@ -1,59 +1,115 @@
 const GIFTS = [
   {
-    id: "jantar-romantico",
-    nome: "Jantar romântico",
-    descricao: "Uma noite especial para celebrarmos a nova fase.",
-    valor: 180,
-    categoria: "Experiências"
+    id: "sacos-cimento",
+    nome: "Sacos de cimento para a fundacao do nosso amor",
+    descricao: "Ajuda a manter este projeto conjugal em pe... e sem rachaduras.",
+    valor: 30,
+    categoria: "Obras romanticas",
+    imagem: "images/placeholder-gift.svg"
   },
   {
-    id: "jogo-pratos",
-    nome: "Jogo de pratos",
-    descricao: "Conjunto de 12 peças para refeições em família.",
-    valor: 240,
-    categoria: "Casa"
+    id: "tinta-branca",
+    nome: "Tinta branca para apagar o passado de solteiros",
+    descricao: "Uma camada por cima das historias comprometedoras dos tempos de balada.",
+    valor: 35,
+    categoria: "Obras romanticas",
+    imagem: "images/placeholder-gift.svg"
   },
   {
-    id: "cafeteira",
-    nome: "Cafeteira",
-    descricao: "Para começar os dias com café fresquinho.",
-    valor: 320,
-    categoria: "Eletro"
+    id: "kit-pintura-noivo",
+    nome: "Kit de pintura para o noivo fingir que e o Michelangelo",
+    descricao: "Talento duvidoso, entusiasmo garantido.",
+    valor: 35,
+    categoria: "Obras romanticas",
+    imagem: "images/placeholder-gift.svg"
   },
   {
-    id: "edredom-queen",
-    nome: "Edredom Queen",
-    descricao: "Conforto extra para as noites do novo lar.",
-    valor: 290,
-    categoria: "Quarto"
+    id: "interruptores",
+    nome: "Interruptores para quando um de nos estiver desligado",
+    descricao: "Essenciais para religar a conversa depois de cada drama.",
+    valor: 40,
+    categoria: "Casa com humor",
+    imagem: "images/placeholder-gift.svg"
   },
   {
-    id: "airfryer",
-    nome: "Airfryer",
-    descricao: "Praticidade para receitas rápidas no dia a dia.",
-    valor: 410,
-    categoria: "Eletro"
+    id: "argamassa",
+    nome: "Argamassa para manter este casamento bem colado",
+    descricao: "Para unir coracoes e tambem os azulejos sem sobrar nada.",
+    valor: 40,
+    categoria: "Obras romanticas",
+    imagem: "images/placeholder-gift.svg"
   },
   {
-    id: "lua-de-mel",
-    nome: "Cota lua de mel",
-    descricao: "Ajuda para um passeio inesquecível na viagem.",
+    id: "luminarias",
+    nome: "Luminarias para vermos quem deixou a louca por lavar",
+    descricao: "Sem desculpa de luz fraca na hora de achar o culpado.",
+    valor: 50,
+    categoria: "Casa com humor",
+    imagem: "images/placeholder-gift.svg"
+  },
+  {
+    id: "fechaduras-sogra",
+    nome: "Fechaduras para quando a sogra decidir aparecer sem avisar",
+    descricao: "Seguranca preventiva para manter a paz domestica.",
+    valor: 60,
+    categoria: "Defesa da casa",
+    imagem: "images/placeholder-gift.svg"
+  },
+  {
+    id: "azulejos-cozinha",
+    nome: "Azulejos para a cozinha de campo",
+    descricao: "Para os jantares romanticos e os improvisos de ultima hora.",
+    valor: 85,
+    categoria: "Cozinha",
+    imagem: "images/placeholder-gift.svg"
+  },
+  {
+    id: "tinta-colorida",
+    nome: "Tinta colorida para os dias cinzentos",
+    descricao: "Porque segunda-feira merece ao menos uma parede feliz.",
+    valor: 95,
+    categoria: "Obras romanticas",
+    imagem: "images/placeholder-gift.svg"
+  },
+  {
+    id: "trono-real",
+    nome: "Trono real para momentos de meditacao (Vaso Sanitario)",
+    descricao: "O assento oficial para grandes reflexoes matrimoniais.",
+    valor: 105,
+    categoria: "Casa com humor",
+    imagem: "images/placeholder-gift.svg"
+  },
+  {
+    id: "bancada-oficina",
+    nome: "Bancada de trabalho para a oficina do noivo",
+    descricao: "Para projetos serios que acabam sempre em mais ferramentas.",
+    valor: 115,
+    categoria: "Oficina",
+    imagem: "images/placeholder-gift.svg"
+  },
+  {
+    id: "termoacumulador",
+    nome: "Termoacumulador para nao termos que tomar banho de agua fria apos a primeira discussao",
+    descricao: "Paz conjugal tambem depende da temperatura ideal.",
+    valor: 135,
+    categoria: "Conforto",
+    imagem: "images/placeholder-gift.svg"
+  },
+  {
+    id: "lava-loica",
+    nome: "Lava-loica para quem perder no par ou impar",
+    descricao: "Justica domestica automatica para evitar debates eternos.",
     valor: 150,
-    categoria: "Experiências"
+    categoria: "Cozinha",
+    imagem: "images/placeholder-gift.svg"
   },
   {
-    id: "ta-casando",
-    nome: "Taças de vinho",
-    descricao: "Jogo com 6 taças para brindar bons momentos.",
-    valor: 160,
-    categoria: "Casa"
-  },
-  {
-    id: "aspirador-robo",
-    nome: "Aspirador robô",
-    descricao: "Tecnologia para facilitar a rotina da casa.",
-    valor: 780,
-    categoria: "Eletro"
+    id: "porta-blindada",
+    nome: "Porta blindada para impedir a entrada de boletos indesejados",
+    descricao: "Seguranca maxima contra visitas nao convidadas e contas misteriosas.",
+    valor: 150,
+    categoria: "Defesa da casa",
+    imagem: "images/placeholder-gift.svg"
   }
 ];
 

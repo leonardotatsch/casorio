@@ -16,9 +16,12 @@ function renderGifts() {
       "Podem marcar como reservado, por favor?"
     ].join("\n");
     const waLink = buildWhatsAppLink(msg);
+    const imageSrc = gift.imagem || "images/placeholder-gift.svg";
+    const imageAlt = `Imagem do presente ${gift.nome}`;
 
     return `
       <article class="gift-card" style="animation-delay:${Math.min(index * 60, 280)}ms">
+        <img class="gift-thumb" src="${imageSrc}" alt="${imageAlt}" loading="lazy" />
         <div class="gift-meta">
           <span class="badge">${gift.categoria}</span>
         </div>
@@ -58,29 +61,5 @@ function setupClearButton() {
   });
 }
 
-function setupPaymentInfo() {
-  const mbwayInfo = document.getElementById("mbwayInfo");
-  const ibanInfo = document.getElementById("ibanInfo");
-  const whatsappGeneralLink = document.getElementById("whatsappGeneralLink");
-
-  if (mbwayInfo) {
-    mbwayInfo.textContent = CONTACT_CONFIG.mbway;
-  }
-
-  if (ibanInfo) {
-    ibanInfo.textContent = CONTACT_CONFIG.iban;
-  }
-
-  if (whatsappGeneralLink) {
-    const msg = [
-      "Ola, Helena e Leo!",
-      "Vou participar no presente de casamento e queria confirmar os dados de pagamento.",
-      "Obrigada/o!"
-    ].join("\n");
-    whatsappGeneralLink.href = buildWhatsAppLink(msg);
-  }
-}
-
 renderGifts();
 setupClearButton();
-setupPaymentInfo();

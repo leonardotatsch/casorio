@@ -179,6 +179,14 @@ h1 {
   animation: riseIn 520ms ease forwards;
 }
 
+.gift-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid #eadbcf;
+}
+
 .gift-meta {
   display: flex;
   justify-content: space-between;
@@ -259,6 +267,21 @@ h1 {
   background: linear-gradient(180deg, #fff9ef, #fff);
   display: grid;
   gap: 0.7rem;
+}
+
+.notice-card {
+  margin: 1.2rem 0 1.5rem;
+  border: 1px dashed #d6b79b;
+  border-radius: 16px;
+  padding: 1rem;
+  background: linear-gradient(180deg, #fff7ec, #fffdf7);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.notice-card p {
+  margin: 0;
+  color: var(--ink-soft);
 }
 
 .payment-card p {
