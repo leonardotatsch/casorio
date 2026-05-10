@@ -58,12 +58,23 @@ const GIFTS = [
 ];
 
 const RESERVATION_KEY = "casorio_reserved_gifts";
+const CONTACT_CONFIG = {
+  whatsappNumber: "351910000000",
+  mbway: "910000000",
+  iban: "PT50XXXXX"
+};
 
-function moneyBRL(value) {
-  return new Intl.NumberFormat("pt-BR", {
+function moneyEUR(value) {
+  return new Intl.NumberFormat("pt-PT", {
     style: "currency",
-    currency: "BRL"
+    currency: "EUR"
   }).format(value);
+}
+
+function buildWhatsAppLink(message) {
+  const digits = CONTACT_CONFIG.whatsappNumber.replace(/\D/g, "");
+  const text = encodeURIComponent(message);
+  return `https://wa.me/${digits}?text=${text}`;
 }
 
 function getReservations() {

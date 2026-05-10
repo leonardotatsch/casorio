@@ -224,6 +224,57 @@ h1 {
   background: var(--accent-2);
 }
 
+.card-actions {
+  margin-top: 0.3rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.wa-btn,
+.cta-link {
+  text-decoration: none;
+  text-align: center;
+  border: 1px solid #17795d;
+  color: #17795d;
+  background: #effaf6;
+  border-radius: 999px;
+  font-weight: 700;
+  padding: 0.58rem 0.85rem;
+  transition: all 200ms ease;
+}
+
+.wa-btn:hover,
+.wa-btn:focus-visible,
+.cta-link:hover,
+.cta-link:focus-visible {
+  background: #17795d;
+  color: #fff;
+}
+
+.payment-card {
+  margin: 1.2rem 0 1.5rem;
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  padding: 1rem;
+  background: linear-gradient(180deg, #fff9ef, #fff);
+  display: grid;
+  gap: 0.7rem;
+}
+
+.payment-card p {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+.payment-card.compact {
+  margin-top: 1.2rem;
+}
+
+.payment-grid {
+  display: grid;
+  gap: 0.35rem;
+}
+
 .empty-state {
   border: 1px dashed #ccb69f;
   border-radius: 14px;

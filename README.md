@@ -4,6 +4,9 @@ Site estático com 2 páginas para lista de presentes de casamento:
 
 - Página principal com sugestão de presentes e botão de reserva.
 - Página de carrinho fictício mostrando itens já reservados.
+- Valores formatados em euro (pt-PT).
+- Confirmação por WhatsApp com mensagem pronta.
+- Dados de pagamento por MB Way e transferência bancária (IBAN).
 
 ## Estrutura
 
@@ -32,3 +35,11 @@ A URL publicada ficará no formato:
 
 - O carrinho é fictício e usa `localStorage` do navegador.
 - As reservas existem apenas no navegador/dispositivo de quem acessa.
+
+## Personalização rápida
+
+Edite o objeto `CONTACT_CONFIG` em `data.js` para definir:
+
+- Número de WhatsApp (formato internacional, ex: 3519XXXXXXXX)
+- MB Way
+- IBAN (ex: PT50XXXXX)

@@ -25,15 +25,47 @@ function renderCart() {
     <article class="cart-item">
       <h3>${gift.nome}</h3>
       <p>${gift.descricao}</p>
-      <strong>${moneyBRL(gift.valor)}</strong>
+      <strong>${moneyEUR(gift.valor)}</strong>
     </article>
   `).join("");
 
   const total = reservedItems.reduce((sum, item) => sum + item.valor, 0);
 
   summaryCount.textContent = String(reservedItems.length);
-  summaryTotal.textContent = moneyBRL(total);
+  summaryTotal.textContent = moneyEUR(total);
   summary.classList.remove("hidden");
 }
 
+function setupPaymentInfo() {
+  const mbwayInfo = document.getElementById("mbwayInfo");
+  const ibanInfo = document.getElementById("ibanInfo");
+  const cartWhatsAppLink = document.getElementById("cartWhatsAppLink");
+
+  if (mbwayInfo) {
+    mbwayInfo.textContent = CONTACT_CONFIG.mbway;
+  }
+
+  if (ibanInfo) {
+    ibanInfo.textContent = CONTACT_CONFIG.iban;
+  }
+
+  if (cartWhatsAppLink) {
+    const reservations = getReservations();
+    const reservedItems = GIFTS.filter((gift) => reservations.includes(gift.id));
+    const giftLines = reservedItems.length > 0
+      ? reservedItems.map((gift) => `- ${gift.nome} (${moneyEUR(gift.valor)})`).join("\n")
+      : "- ainda vou escolher o presente";
+
+    const msg = [
+      "Ola, Helena e Leo!",
+      "Quero confirmar o meu presente de casamento:",
+      giftLines,
+      "Vou fazer o pagamento por MB Way ou transferencia."
+    ].join("\n");
+
+    cartWhatsAppLink.href = buildWhatsAppLink(msg);
+  }
+}
+
 renderCart();
+setupPaymentInfo();
