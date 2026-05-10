@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Casorio | Carrinho Fictício</title>
+  <meta name="description" content="Carrinho fictício de presentes reservados" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+
+  <header class="container hero">
+    <p class="eyebrow">Casamento Ana + Leo</p>
+    <h1>Carrinho fictício</h1>
+    <p class="subtitle">Aqui você visualiza o que já foi reservado na lista de presentes.</p>
+    <nav class="top-nav" aria-label="Navegação principal">
+      <a class="nav-link" href="index.html">Presentes</a>
+      <a class="nav-link active" href="carrinho.html" aria-current="page">Carrinho fictício</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <div class="section-head">
+        <h2>Itens reservados</h2>
+      </div>
+      <div id="cartState" class="empty-state">Ainda não há presentes reservados.</div>
+      <div id="cartList" class="cart-list" aria-live="polite"></div>
+      <aside id="cartSummary" class="summary hidden" aria-live="polite">
+        <h3>Resumo</h3>
+        <p><strong>Quantidade de itens:</strong> <span id="summaryCount">0</span></p>
+        <p><strong>Valor total estimado:</strong> <span id="summaryTotal">R$ 0,00</span></p>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="container footer">
+    <p>Este carrinho é apenas visualização, sem cobrança real.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>
