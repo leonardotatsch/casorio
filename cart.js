@@ -59,8 +59,7 @@ function setupPaymentInfo() {
     const msg = [
       "Ola, Helena e Leo!",
       "Quero confirmar o meu presente de casamento:",
-      giftLines,
-      "Vou fazer o pagamento por MB Way ou transferencia."
+      giftLines
     ].join("\n");
 
     cartWhatsAppLink.href = buildWhatsAppLink(msg);
